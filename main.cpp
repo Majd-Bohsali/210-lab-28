@@ -22,8 +22,8 @@ void shufflingGoatOrder(list<Goat>& trip);
 void accumulateGoatAge(list<Goat>& trip);
 void calculateAverageAge(list<Goat>& trip);
 void reverseGoatOrder(list<Goat>& trip);
-void removeGoatsOfAge(list<Goat>& trip);
-void getCountGoatsOfAge(list<Goat>& trip);
+void setAllAges(list<Goat>& trip);
+void sortGoatByAge(list<Goat>& trip);
 int main_menu();
 
 int main() {
@@ -96,12 +96,12 @@ int main() {
                 reverseGoatOrder(trip);
                 break;
             case 10:    
-                cout << "Removing goats of certain age\n";
-                removeGoatsOfAge(trip); 
+                cout << "Seting all ages to the same value\n";
+                setAllAges(trip); 
                 break;
             case 11:    
-                cout << "Getting count of specific age\n";
-                getCountGoatsOfAge(trip); 
+                cout << "Sorting goats by age\n";
+                sortGoatByAge(trip); 
                 break;
             default:
                 cout << "Invalid selection.\n";
@@ -124,8 +124,8 @@ int main_menu() {
     cout << "[7] Sum ages\n";
     cout << "[8] Calculate average goat age\n";
     cout << "[9] Reverse goat order\n";
-    cout << "[10] Remove goats of specific age\n";
-    cout << "[11] Get count of specific age\n";
+    cout << "[10] Set all ages\n";
+    cout << "[11] Sort goats by age\n";
     cout << "[12] Quit\n";
     cout << "Choice --> ";
     int choice;
@@ -199,13 +199,13 @@ void shufflingGoatOrder(list<Goat>& trip) {
 
 void accumulateGoatAge(list<Goat>& trip) {
     // Milestone 4
-    int totalAge = accumulate(trip.begin(), trip.end(), 0, [](int sum, Goat& g) {return sum + g.get_age();}); 
+    int totalAge = accumulate(trip.begin(), trip.end(), 0, [](int sum, Goat& goat) {return sum + goat.get_age();}); 
     cout << "Total age: " << totalAge << endl; 
 }
 
 void calculateAverageAge(list<Goat>& trip) {
     // Milestone 5
-    double totalAge = accumulate(trip.begin(), trip.end(), 0, [](int sum, Goat& g) {return sum + g.get_age();}); 
+    double totalAge = accumulate(trip.begin(), trip.end(), 0, [](int sum, Goat& goat) {return sum + goat.get_age();}); 
     cout << "Average age: " << totalAge/trip.size() << endl; 
 }
 
@@ -214,10 +214,14 @@ void reverseGoatOrder(list<Goat>& trip) {
     trip.reverse(); 
 }
 
-void removeGoatsOfAge(list<Goat>& trip) {
+void setAllAges(list<Goat>& trip) {
     // Milestone 7
+    int newAge; 
+    cout << "What new age to set: "; 
+    cin >> newAge; 
+    for_each(trip.begin(), trip.end(), [&](Goat& goat) {goat.set_age(newAge);});
 }
 
-void getCountGoatsOfAge(list<Goat>& trip) {
+void sortGoatByAge(list<Goat>& trip) {
     // Milestone 8
 }
