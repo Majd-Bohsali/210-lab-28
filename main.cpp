@@ -72,31 +72,31 @@ int main() {
                 deleteAllGoats(trip); 
                 break;
             case 5:    
-                cout << "\n";
+                cout << "Sorted goats by name\n";
                 sortGoatsByName(trip); 
                 break;
             case 6:    
-                cout << "\n";
+                cout << "Youngest goat:\n";
                 returnYoungestGoat(trip);
                 break;
             case 7:    
-                cout << "\n";
+                cout << "Oldest goat: \n";
                 returnOldestGoat(trip); 
                 break;
             case 8:    
-                cout << "\n";
+                cout << "Average goat age: \n";
                 calculateAverageAge(trip);
                 break;
             case 9:    
-                cout << "\n";
+                cout << "Reversing goat order\n";
                 reverseGoatOrder(trip);
                 break;
             case 10:    
-                cout << "\n";
+                cout << "Removing goats of certain age\n";
                 removeGoatsOfAge(trip); 
                 break;
             case 11:    
-                cout << "\n";
+                cout << "Getting count of specific age\n";
                 getCountGoatsOfAge(trip); 
                 break;
             default:
@@ -182,6 +182,7 @@ void deleteAllGoats(list<Goat>& trip) {
 
 void sortGoatsByName(list<Goat>& trip) {
     // Milestone 2
+    trip.sort();
 }
 
 void returnYoungestGoat(list<Goat> trip) {
