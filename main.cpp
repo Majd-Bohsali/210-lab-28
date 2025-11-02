@@ -10,11 +10,18 @@ using namespace std;
 const int SZ_NAMES = 200, SZ_COLORS = 25;
 
 int select_goat(list<Goat> trip);
-void delete_goat(list<Goat> &trip);
-void add_goat(list<Goat> &trip, string [], string []);
+void delete_goat(list<Goat>& trip);
+void add_goat(list<Goat>& trip, string [], string []);
 void display_trip(list<Goat> trip);
+void deleteAllGoats(list<Goat>& trip);
+void sortGoatsByName(list<Goat>& trip);
+void returnYoungestGoat(list<Goat> trip);
+void returnOldestGoat(list<Goat>& trip);
+void calculateAverageAge(list<Goat>& trip);
+void reverseGoatOrder(list<Goat>& trip);
+void removeGoatsOfAge(list<Goat>& trip);
+void getCountGoatsOfAge(list<Goat>& trip);
 int main_menu();
-
 int main() {
     srand(time(0));
     bool again;
@@ -46,7 +53,7 @@ int main() {
     
     // Goat Manager 3001 Engine
     int sel = main_menu();
-    while (sel != 4) {
+    while (sel != 12) {
         switch (sel) {
             case 1:
                 cout << "Adding a goat.\n";
@@ -62,30 +69,35 @@ int main() {
                 break;
             case 4:    
                 cout << "\n";
+                deleteAllGoats(trip); 
                 break;
             case 5:    
                 cout << "\n";
+                sortGoatsByName(trip); 
                 break;
             case 6:    
                 cout << "\n";
+                returnYoungestGoat(trip);
                 break;
             case 7:    
                 cout << "\n";
+                returnOldestGoat(trip); 
                 break;
             case 8:    
                 cout << "\n";
+                calculateAverageAge(trip);
                 break;
             case 9:    
                 cout << "\n";
+                reverseGoatOrder(trip);
                 break;
             case 10:    
                 cout << "\n";
+                removeGoatsOfAge(trip); 
                 break;
             case 11:    
                 cout << "\n";
-                break;
-            case 12:    
-                cout << "\n";
+                getCountGoatsOfAge(trip); 
                 break;
             default:
                 cout << "Invalid selection.\n";
@@ -162,4 +174,36 @@ int select_goat(list<Goat> trp) {
         cin >> input;
     }
     return input;
+}
+
+void deleteAllGoats(list<Goat>& trip) {
+    // Milestone 1
+}
+
+void sortGoatsByName(list<Goat>& trip) {
+    // Milestone 2
+}
+
+void returnYoungestGoat(list<Goat> trip) {
+    // Milestone 3
+}
+
+void returnOldestGoat(list<Goat>& trip) {
+    // Milestone 4
+}
+
+void calculateAverageAge(list<Goat>& trip) {
+    // Milestone 5
+}
+
+void reverseGoatOrder(list<Goat>& trip) {
+    // Milestone 6
+}
+
+void removeGoatsOfAge(list<Goat>& trip) {
+    // Milestone 7
+}
+
+void getCountGoatsOfAge(list<Goat>& trip) {
+    // Milestone 8
 }
