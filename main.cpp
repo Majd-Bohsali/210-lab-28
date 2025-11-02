@@ -5,6 +5,8 @@
 #include <iomanip>
 #include <list>
 #include "Goat.h"
+#include <algorithm>
+#include <random> 
 using namespace std;
 
 const int SZ_NAMES = 200, SZ_COLORS = 25;
@@ -15,8 +17,8 @@ void add_goat(list<Goat>& trip, string [], string []);
 void display_trip(list<Goat> trip);
 void deleteAllGoats(list<Goat>& trip);
 void sortGoatsByName(list<Goat>& trip);
-void returnYoungestGoat(list<Goat> trip);
-void returnOldestGoat(list<Goat>& trip);
+void shufflingGoatOrder(list<Goat> trip);
+void replacingGoatAges(list<Goat>& trip);
 void calculateAverageAge(list<Goat>& trip);
 void reverseGoatOrder(list<Goat>& trip);
 void removeGoatsOfAge(list<Goat>& trip);
@@ -76,12 +78,12 @@ int main() {
                 sortGoatsByName(trip); 
                 break;
             case 6:    
-                cout << "Youngest goat:\n";
-                returnYoungestGoat(trip);
+                cout << "Shuffling goat order\n";
+                shufflingGoatOrder(trip);
                 break;
             case 7:    
-                cout << "Oldest goat: \n";
-                returnOldestGoat(trip); 
+                cout << "Replacing goat ages\n";
+                replacingGoatAges(trip); 
                 break;
             case 8:    
                 cout << "Average goat age: \n";
@@ -116,8 +118,8 @@ int main_menu() {
     cout << "[3] List goats\n";
     cout << "[4] Delete all goats\n";
     cout << "[5] Sort goats by name\n";
-    cout << "[6] Return youngest goat\n";
-    cout << "[7] Return oldest goat\n";
+    cout << "[6] Shuffle goat order\n";
+    cout << "[7] Replace goat ages\n";
     cout << "[8] Calculate average goat age\n";
     cout << "[9] Reverse goat order\n";
     cout << "[10] Remove goats of specific age\n";
@@ -185,11 +187,12 @@ void sortGoatsByName(list<Goat>& trip) {
     trip.sort();
 }
 
-void returnYoungestGoat(list<Goat> trip) {
+void shufflingGoatOrder(list<Goat> trip) {
     // Milestone 3
+    shuffle(trip.begin(), trip.end(), default_random_engine()); 
 }
 
-void returnOldestGoat(list<Goat>& trip) {
+void replacingGoatAges(list<Goat>& trip) {
     // Milestone 4
 }
 
