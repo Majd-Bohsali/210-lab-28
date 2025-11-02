@@ -17,7 +17,7 @@ void add_goat(list<Goat>& trip, string [], string []);
 void display_trip(list<Goat> trip);
 void deleteAllGoats(list<Goat>& trip);
 void sortGoatsByName(list<Goat>& trip);
-void shufflingGoatOrder(list<Goat> trip);
+void shufflingGoatOrder(list<Goat>& trip);
 void replacingGoatAges(list<Goat>& trip);
 void calculateAverageAge(list<Goat>& trip);
 void reverseGoatOrder(list<Goat>& trip);
@@ -188,9 +188,12 @@ void sortGoatsByName(list<Goat>& trip) {
     trip.sort();
 }
 
-void shufflingGoatOrder(list<Goat> trip) {
+void shufflingGoatOrder(list<Goat>& trip) {
     // Milestone 3
-    shuffle(trip.begin(), trip.end(), default_random_engine()); 
+    default_random_engine rng(time(0));
+    vector<Goat> tempTrip(trip.begin(), trip.end()); 
+    shuffle(tempTrip.begin(), tempTrip.end(), rng); 
+    trip.assign(tempTrip.begin(), tempTrip.end());
 }
 
 void replacingGoatAges(list<Goat>& trip) {
