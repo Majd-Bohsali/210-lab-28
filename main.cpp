@@ -68,7 +68,7 @@ int main() {
                 display_trip(trip);
                 break;
             case 4:    
-                cout << "\n";
+                cout << "Deleting all goats\n";
                 deleteAllGoats(trip); 
                 break;
             case 5:    
@@ -177,6 +177,7 @@ int select_goat(list<Goat> trp) {
 
 void deleteAllGoats(list<Goat>& trip) {
     // Milestone 1
+    trip.clear();
 }
 
 void sortGoatsByName(list<Goat>& trip) {
