@@ -1,3 +1,5 @@
+// COMSC-210 | Lab 28 | Majd Bohsali
+// IDE uses: Visual Studio Code
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -120,7 +122,7 @@ int select_goat(list<Goat> trp) {
     display_trip(trp);
     cout << "Choice --> ";
     cin >> input;
-    while (input < 1 or input > trp.size()) {
+    while (input < 1 || input > trp.size()) {
         cout << "Invalid choice, again --> ";
         cin >> input;
     }
