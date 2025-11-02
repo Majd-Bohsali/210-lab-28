@@ -88,7 +88,7 @@ int main() {
                 accumulateGoatAge(trip); 
                 break;
             case 8:    
-                cout << "Average goat age: \n";
+                cout << "Averaging age \n";
                 calculateAverageAge(trip);
                 break;
             case 9:    
@@ -205,6 +205,8 @@ void accumulateGoatAge(list<Goat>& trip) {
 
 void calculateAverageAge(list<Goat>& trip) {
     // Milestone 5
+    double totalAge = accumulate(trip.begin(), trip.end(), 0, [](int sum, Goat& g) {return sum + g.get_age();}); 
+    cout << "Average age: " << totalAge/trip.size() << endl; 
 }
 
 void reverseGoatOrder(list<Goat>& trip) {
