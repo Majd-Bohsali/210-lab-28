@@ -197,7 +197,7 @@ void shufflingGoatOrder(list<Goat>& trip) {
 }
 
 void replacingGoatAges(list<Goat>& trip) {
-    // Milestone 4
+    // Milestone 4 
 }
 
 void calculateAverageAge(list<Goat>& trip) {
