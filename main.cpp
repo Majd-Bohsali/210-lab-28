@@ -18,7 +18,7 @@ void display_trip(list<Goat> trip);
 void deleteAllGoats(list<Goat>& trip);
 void sortGoatsByName(list<Goat>& trip);
 void shufflingGoatOrder(list<Goat>& trip);
-void replacingGoatAges(list<Goat>& trip);
+void accumulateGoatAge(list<Goat>& trip);
 void calculateAverageAge(list<Goat>& trip);
 void reverseGoatOrder(list<Goat>& trip);
 void removeGoatsOfAge(list<Goat>& trip);
@@ -83,8 +83,8 @@ int main() {
                 shufflingGoatOrder(trip);
                 break;
             case 7:    
-                cout << "Replacing goat ages\n";
-                replacingGoatAges(trip); 
+                cout << "Summing ages\n";
+                accumulateGoatAge(trip); 
                 break;
             case 8:    
                 cout << "Average goat age: \n";
@@ -120,7 +120,7 @@ int main_menu() {
     cout << "[4] Delete all goats\n";
     cout << "[5] Sort goats by name\n";
     cout << "[6] Shuffle goat order\n";
-    cout << "[7] Replace goat ages\n";
+    cout << "[7] Sum ages\n";
     cout << "[8] Calculate average goat age\n";
     cout << "[9] Reverse goat order\n";
     cout << "[10] Remove goats of specific age\n";
@@ -196,8 +196,8 @@ void shufflingGoatOrder(list<Goat>& trip) {
     trip.assign(tempTrip.begin(), tempTrip.end());
 }
 
-void replacingGoatAges(list<Goat>& trip) {
-    // Milestone 4 
+void accumulateGoatAge(list<Goat>& trip) {
+    // Milestone 4: 
 }
 
 void calculateAverageAge(list<Goat>& trip) {
