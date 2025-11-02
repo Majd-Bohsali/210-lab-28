@@ -24,6 +24,7 @@ void reverseGoatOrder(list<Goat>& trip);
 void removeGoatsOfAge(list<Goat>& trip);
 void getCountGoatsOfAge(list<Goat>& trip);
 int main_menu();
+
 int main() {
     srand(time(0));
     bool again;
