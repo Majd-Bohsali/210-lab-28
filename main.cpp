@@ -211,6 +211,7 @@ void calculateAverageAge(list<Goat>& trip) {
 
 void reverseGoatOrder(list<Goat>& trip) {
     // Milestone 6
+    trip.reverse(); 
 }
 
 void removeGoatsOfAge(list<Goat>& trip) {
