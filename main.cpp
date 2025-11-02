@@ -7,6 +7,7 @@
 #include "Goat.h"
 #include <algorithm>
 #include <random> 
+#include <numeric>
 using namespace std;
 
 const int SZ_NAMES = 200, SZ_COLORS = 25;
@@ -197,7 +198,9 @@ void shufflingGoatOrder(list<Goat>& trip) {
 }
 
 void accumulateGoatAge(list<Goat>& trip) {
-    // Milestone 4: 
+    // Milestone 4
+    int totalAge = accumulate(trip.begin(), trip.end(), 0, [](int sum, Goat& g) {return sum + g.get_age();}); 
+    cout << "Total age: " << totalAge << endl; 
 }
 
 void calculateAverageAge(list<Goat>& trip) {
