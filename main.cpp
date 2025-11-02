@@ -60,6 +60,33 @@ int main() {
                 cout << "Displaying goat data.\n";
                 display_trip(trip);
                 break;
+            case 4:    
+                cout << "\n";
+                break;
+            case 5:    
+                cout << "\n";
+                break;
+            case 6:    
+                cout << "\n";
+                break;
+            case 7:    
+                cout << "\n";
+                break;
+            case 8:    
+                cout << "\n";
+                break;
+            case 9:    
+                cout << "\n";
+                break;
+            case 10:    
+                cout << "\n";
+                break;
+            case 11:    
+                cout << "\n";
+                break;
+            case 12:    
+                cout << "\n";
+                break;
             default:
                 cout << "Invalid selection.\n";
                 break;
@@ -76,11 +103,19 @@ int main_menu() {
     cout << "[1] Add a goat\n";
     cout << "[2] Delete a goat\n";
     cout << "[3] List goats\n";
-    cout << "[4] Quit\n";
+    cout << "[4] Delete all goats\n";
+    cout << "[5] Sort goats by name\n";
+    cout << "[6] Return youngest goat\n";
+    cout << "[7] Return oldest goat\n";
+    cout << "[8] Calculate average goat age\n";
+    cout << "[9] Reverse goat order\n";
+    cout << "[10] Remove goats of specific age\n";
+    cout << "[11] Get count of specific age\n";
+    cout << "[12] Quit\n";
     cout << "Choice --> ";
     int choice;
     cin >> choice;
-    while (choice < 1 || choice > 4) {
+    while (choice < 1 || choice > 12) {
         cout << "Invalid, again --> ";
         cin >> choice;
     }
