@@ -224,4 +224,5 @@ void setAllAges(list<Goat>& trip) {
 
 void sortGoatByAge(list<Goat>& trip) {
     // Milestone 8
+    trip.sort([](Goat& goat1, Goat& goat2) {return goat1.get_age() < goat2.get_age();});
 }
